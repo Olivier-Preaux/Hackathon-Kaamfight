@@ -1,0 +1,181 @@
+@font-face {
+    font-family: "Excellence";
+    src:url("../Fonts/Excellence.otf") format("opentype");
+  }
+  
+  
+  
+  body {
+      margin : 0;
+      padding : 0 ;
+      color: rgb(185, 182, 182) ;
+      background-color: black;
+      font-family: "Excellence" ,impact , helvetica , arial, sans-serif;
+      height : 100% ;    
+  }
+
+  .messageFlash{
+      font-size: 2em ;
+      color : red ;
+      text-align: center ;
+      background-color: goldenrod;
+      padding : 0.1em ;
+      border-color: red ;
+  }
+
+  a {text-decoration: none ;
+    margin-left: 0.5em ;
+color : rgb(184, 182, 182) }
+
+h1 {
+    color : white ;
+}
+
+nav {
+    display : flex ;
+    flex-direction: row ;
+    justify-content: space-between;
+    background-color: rgb(63, 62, 62);
+}
+
+nav div {
+    display : flex ;
+    flex-direction: row ;
+    margin-left: 1em ;
+    margin-right: 1em ;
+    margin-top: auto ;
+    margin-bottom: auto ;
+    
+}
+
+nav div a {
+    margin-right : 1em ;
+}
+
+nav h1 {
+    font-size: 2em ;
+}
+
+.charactersBlock{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 0px;
+        grid-template-areas:
+          ". . . ."
+          ". . . .";
+          margin-left : 20%  ;
+          margin-right : 20% ;
+      }
+
+.affiche{
+    background-color: goldenrod;
+}
+
+.characterPicture {
+    background-color: goldenrod;
+     border : 10px bold rgb(255, 255, 255) ;
+    height : 22em ;
+    width : 16em ;
+}
+
+
+.characterPicture img {
+    
+    height : 21.5em ;
+    width : 15.5em ;
+}
+
+.characterName{
+   
+    font-size: 1em ;
+    text-align: center ;
+}
+
+.h1index {
+    text-align: center;
+}
+
+.createCharacter{
+    font-size: 1.5em ;
+    margin-top: 1em ;
+    text-align: center ;
+    text-decoration: none ;
+    color: black;
+}
+
+.createCharacter a {text-decoration: none ;}
+
+
+
+
+.blockShow {
+    display:flex ;
+    flex-direction: row ;
+}
+
+.namecharacter{
+    font-size: 2em ;
+    text-align: center ;
+    margin-bottom: 1em ;
+}
+
+.imageshow{
+    width : 30% ;   
+    padding-left: 3em ;
+}
+
+.imageshow img {   
+    border-width : 3px ;
+    border-style : bold ;
+    border-color : white ;}
+
+.blockShowCaract {
+    width : 30% ; 
+    font-size: 1.5em ;
+    margin-right: 4em ;
+    margin-left: 2em ;
+    margin-bottom: 2em ;
+}
+
+.blockShowCaract div {
+    margin-bottom: 2em ;
+}
+
+
+.blockShowCaract{
+    width : 30% ;
+    text-align:justify;
+
+}
+
+.footer{
+    text-align: center ;
+}
+
+.block3{
+    width: 33% ;
+}
+.power {
+    font-size: 2.5em ;
+ text-align: center;
+ margin-bottom: 7em ;
+ color :red ;
+}
+
+.combat{
+   
+text-align: center;
+}
+
+.combat button {
+    height : 3em ;
+    width : 12em ;
+}
+
+.poweruser{
+    margin-top: 3em ;
+    text-align: center;
+    color : green ;
+    font-size: 2em ;
+}

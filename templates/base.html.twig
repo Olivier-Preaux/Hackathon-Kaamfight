@@ -3,11 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
 
-        {% block javascripts %}{% endblock %}
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
     </head>
     <body>
+        <nav>
+            <div>
+                <div class="logo"><h1>KaamFight</h1></div>
+                <div> <a href="{{ path('character_index') }}">Les chevaliers</a></div>
+                <div>Mes combats </div>
+            </div>
+            <div>
+                {% if app.user %}
+                {{ app.user.email }}
+                    <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}"> Se connecter</a>
+                    <a href="{{ path('app_register') }}"> S'enregistrer</a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="messageFlash">
+        {% for category, messages in app.flashes %}
+			{% for message in messages %}
+				<div class="alert alert-{{ category }}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endfor %}
+        </div>
+
         {% block body %}{% endblock %}
+
+ {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+
     </body>
 </html>

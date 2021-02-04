@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Chevaliers de Kaamelott{% endblock %}
+
+{% block body %}
+    <h1 class="h1index">Les Chevaliers de Kaamelott</h1>
+
+    <div class="charactersBlock">
+        
+        {% for character in characters %}      
+                           
+            <div class="affiches">
+                <div class="characterPicture"><a href="{{ path('character_show', {'id': character.id}) }}"><img src="{{ character.picture }}"/></a></div>
+                <div class="characterName">{{ character.firstName }}               
+                    {% if is_granted("ROLE_ADMIN") %}
+                    <a href="{{ path('character_edit', {'id': character.id}) }}">edit</a>
+                    {% endif %}
+                </div>   
+            </div>
+            
+        {% else %}
+           
+                <p>>colspan="6">no records found</p>
+           
+        {% endfor %}
+        
+    </div>
+<div class="createCharacter">
+
+    <a href="{{ path('character_new') }}">Create new</a></div>
+{% endblock %}
