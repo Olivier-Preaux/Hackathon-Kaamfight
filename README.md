@@ -1,5 +1,11 @@
 # kaamfight2
 
+Page accueuil
+localhost:8000/character
+
+
+Ressources :
+
 MCD / User story
 https://docs.google.com/presentation/d/1vX2kapAwVwB1lENwnDOJTe-dFw-81WzzeAJnIirfXjE/edit?usp=sharing
 
